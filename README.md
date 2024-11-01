@@ -1,7 +1,9 @@
 Project Summary
+
 This project focuses on analyzing, visualizing, and experimenting with the PLOW Dataset for Biomedical Named Entity Recognition (NER). The dataset includes tokens with short forms (acronyms) that facilitate text understanding within the biomedical field, such as identifying RNA, DNA, and other cellular components. We apply multiple Natural Language Processing (NLP) methods, including K-Nearest Neighbors (KNN), Support Vector Machines (SVM), and Long Short-Term Memory (LSTM) models, to evaluate performance on the dataset.
 
 Dataset Description
+
 The PLOW dataset, a subset used for NER, is divided into training, testing, and validation datasets, with tags that categorize tokens into four main categories:
 
 B-O: Other tokens not related to abbreviations or long forms.
