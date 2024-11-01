@@ -7,26 +7,37 @@ Dataset Description
 The PLOW dataset, a subset used for NER, is divided into training, testing, and validation datasets, with tags that categorize tokens into four main categories:
 
 B-O: Other tokens not related to abbreviations or long forms.
+
 B-AC: Tokens classified as abbreviations or acronyms.
+
 B-LF: Tokens indicating the beginning of a long form.
+
 I-LF: Tokens inside a long form.
+
 Data Visualization
+
 Histograms: Show the distribution of token lengths across datasets. Observed that the training dataset is skewed with mostly shorter tokens.
 Bar Chart: Frequency of each tag, where B-O is the most frequent, leading to an imbalanced dataset.
 Heatmap: Co-occurrences of POS and NER tags, identifying that B-O tokens are mostly nouns or punctuation.
+
 Experimentation
+
 Experiment 1: Data Pre-processing Techniques
 System 1: Tokenized data with Tfidf Vectorization, followed by KNN.
 System 2: Tfidf Vectorization with SVM.
 System 3: Tfidf with bigrams in KNN, which significantly improved F1-scores due to the bigram token pairing.
+
 Experiment 2: NLP Algorithms and Techniques
 System 1: FastText Vectorization combined with SVM for rare tokens.
 System 2: Encoding and applying LSTM for sequence learning.
+
 Experiment 3: Text Encoding and Transformation
 Compared Tfidf Vectorization and FastText Vectorization with KNN.
+
 Experiment 4: Hyperparameter Optimization
 System 1: SVM with Tfidf Vectorization and optimized kernel parameters.
 System 2: KNN with tuned neighbors and Euclidean distance metric.
+
 Results and Analysis
 Experiment 1: System 3 (bigram Tfidf with KNN) achieved the best F1 score (0.88) among data preprocessing techniques.
 Experiment 2: Both SVM and LSTM models struggled, with F1 scores of 0.23, indicating room for tuning or more epochs.
